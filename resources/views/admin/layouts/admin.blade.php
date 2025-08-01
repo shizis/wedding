@@ -18,13 +18,13 @@
         <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
         <!-- Scripts -->
         @vite(['resources/css/app.css'])
-
         @fluxAppearance
+
     </head>
 
-    <body class="font-poppins min-h-screen antialiased">
+    <body class="">
         <!-- Page Content -->
-        <main class="">
+        <main class="min-h-svh">
             {{ $slot }}
         </main>
 
