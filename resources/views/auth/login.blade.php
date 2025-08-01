@@ -12,7 +12,7 @@
     </head>
 
     <body class="min-h-screen bg-zinc-100 antialiased">
-        <main class="mx-auto flex min-h-screen max-w-screen-xl flex-col place-content-center gap-4 px-6">
+        <main class="mx-auto flex min-h-screen max-w-(--breakpoint-xl) flex-col place-content-center gap-4 px-6">
             <div class="inline-flex justify-end">
                 <a href="/" class="rounded-sm border border-gray-300 bg-white p-2 hover:bg-gray-100">
                     <x-lucide-house class="size-5 text-gray-500" />
