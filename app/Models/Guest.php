@@ -15,6 +15,12 @@ class Guest extends Model
 
     use HasUuids;
 
+    protected $fillable = [
+        'name',
+        'slug',
+        'address'
+    ];
+
     public function newUniqueId(): string
     {
         return (string) Uuid::uuid4();
@@ -24,8 +30,6 @@ class Guest extends Model
     {
         return ['uuid'];
     }
-
-    protected $guarded = [];
 
     public function users()
     {

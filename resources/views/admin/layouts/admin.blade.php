@@ -22,11 +22,57 @@
 
     </head>
 
-    <body class="">
-        <!-- Page Content -->
-        <main class="min-h-svh">
+    <body class="min-h-svh">
+        <flux:sidebar sticky stashable
+            class="border-r border-zinc-200 bg-zinc-50 rtl:border-l rtl:border-r-0 dark:border-zinc-700 dark:bg-zinc-900">
+            <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
+            <flux:brand href="#" name="Wedding" class="px-2" />
+            <flux:navlist variant="outline">
+                <flux:navlist.item icon="home" href="{{ route('admin.index') }}">Home</flux:navlist.item>
+                <flux:navlist.item icon="document-text" href="{{ route('admin.guests') }}">Guests</flux:navlist.item>
+            </flux:navlist>
+            <flux:spacer />
+            <flux:button x-data x-on:click="$flux.dark = ! $flux.dark" size="sm" variant="subtle">Dark/Light Mode
+            </flux:button>
+            <flux:navlist variant="outline">
+                <flux:navlist.item icon="cog-6-tooth" href="#">Settings</flux:navlist.item>
+                <flux:navlist.item icon="information-circle" href="#">Help</flux:navlist.item>
+            </flux:navlist>
+            <flux:dropdown position="top" align="start" class="max-lg:hidden">
+                <flux:profile name="{{ Auth::user()->name }}" />
+
+                <flux:menu>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <flux:button type="submit" class="w-full" variant="subtle"
+                            icon="arrow-right-start-on-rectangle">
+                            Log out
+                        </flux:button>
+                    </form>
+                </flux:menu>
+            </flux:dropdown>
+        </flux:sidebar>
+
+        <flux:header class="lg:hidden">
+            <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
+            <flux:spacer />
+            <flux:dropdown position="top" alignt="start">
+                <flux:profile />
+
+                <flux:menu>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <flux:menu.item icon="arrow-right-start-on-rectangle">
+                            <flux:button type="submit">Log out</flux:button>
+                        </flux:menu.item>
+                    </form>
+                </flux:menu>
+            </flux:dropdown>
+        </flux:header>
+
+        <flux:main>
             {{ $slot }}
-        </main>
+        </flux:main>
 
         @fluxScripts
         @vite(['resources/js/app.js'])

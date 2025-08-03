@@ -10,8 +10,14 @@ class Comment extends Model
     /** @use HasFactory<\Database\Factories\CommentFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'guest_id',
+        'comment',
+        'attendance'
+    ];
+
     public function guests()
     {
-        return $this->belongsTo(Guest::class);
+        return $this->belongsTo(Guest::class, 'guest_id', 'id', 'guests');
     }
 }

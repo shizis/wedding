@@ -1,8 +1,8 @@
-<section class="mt-10 w-full bg-[#FFEAD8] py-10" id="our_wedding">
-    <div class="mx-auto max-w-screen-md">
+<section class="mt-10 w-full bg-pink-100 py-10" id="our_wedding">
+    <div class="mx-auto max-w-screen-md px-4">
         <div class="flex w-full flex-col gap-y-6 text-center">
             <div class="w-fit self-center">
-                <h2 class="font-italianno text-5xl text-black">
+                <h2 class="font-italianno text-5xl text-black lg:text-6xl">
                     RSVP
                 </h2>
             </div>
@@ -10,8 +10,15 @@
                 class="w-full rounded-lg border border-gray-300 bg-white p-4 text-start">
                 <label for="name" class="block text-sm">
                     <span class="text-black after:ml-0.5 after:text-red-500 after:content-['*']">Nama</span>
-                    <input type="text" wire:model='form.name' id="name" placeholder="Name..."
+                    <input type="text" wire:model='form.guest' id="name" placeholder="Name..." readonly
                         class="focus:outline-angga-laras-button-active mt-1 w-full rounded-md border border-gray-300 bg-white p-2 text-black">
+                    @if (!$guest)
+                        <div class="mt-2">
+                            <span class="rounded-xs bg-red-100 px-2 py-1 text-xs text-red-600">
+                                Mohon maaf Khusus tamu undangan
+                            </span>
+                        </div>
+                    @endif
                 </label>
                 @error('form.name')
                     <em class="mt-1 block text-sm italic text-red-500">{{ $message }}</em>
@@ -43,89 +50,37 @@
                 @enderror
 
                 <div class="flex w-full justify-end">
-                    <button type="submit" form="set-comment"
-                        class="mt-8 cursor-pointer self-end rounded-full bg-[#D76C82] px-6 py-2 text-center text-sm font-semibold text-white">Kirim</button>
+                    <button type="submit" form="set-comment" wire:click="$refresh" wire:loading.attr="disabled"
+                        class="mt-8 cursor-pointer self-end rounded-full bg-[#D76C82] px-6 py-2 text-center text-sm font-semibold text-white disabled:opacity-50">
+                        Kirim
+                    </button>
                 </div>
             </form>
-
         </div>
 
         <div class="mt-8 flex w-full flex-col">
-            <span class="">Comments</span>
+            <span class="mb-4">Comments</span>
             <div class="rounded-lg border border-gray-300 bg-white p-4">
-                <div class="flex w-full flex-col gap-y-6 text-start">
-                    <div class="">
-                        <div class="flex items-center gap-x-1">
-                            <h3 class="text-black">Aril</h3>
-                            <x-lucide-circle-check class="size-4 shrink-0 text-green-600" />
+                <div class="flex w-full flex-col gap-y-6 text-start" wire:loading.class="opacity-50">
+                    @forelse ($comments as $comment)
+                        <div class="" wire:key="{{ $comment->id }}">
+                            <div class="flex items-center gap-x-1">
+                                <h3 class="text-black">{{ $comment->guests->name }}</h3>
+                                <x-lucide-circle-check class="size-5 shrink-0 text-green-600" />
+                            </div>
+                            <p class="mb-2 mt-1 text-sm text-gray-800">
+                                {{ $comment->comment }}
+                            </p>
+                            <span class="text-sm text-gray-500">2 Hari yang lalu</span>
                         </div>
-                        <p class="mb-2 mt-1 text-sm text-gray-800">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                            Nihil
-                            enim
-                            necessitatibus provident
-                            voluptate vel, soluta expedita quis excepturi praesentium repellat.
-                        </p>
-                        <span class="text-sm text-gray-500">2 Hari yang lalu</span>
-                    </div>
-                    <div class="">
-                        <div class="flex items-center gap-x-1">
-                            <h3 class="text-black">Lesmana</h3>
-                            <x-lucide-circle-minus class="size-4 shrink-0 text-red-600" />
+                    @empty
+                        <div>
+                            <p class="capitalize">no comments yet</p>
                         </div>
-                        <p class="text-sm text-gray-800">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Nihil
-                            enim
-                            necessitatibus provident
-                            voluptate vel, soluta expedita quis excepturi praesentium repellat.
-                        </p>
-                        <span class="text-sm text-gray-500">2 Hari yang lalu</span>
-                    </div>
-                    <div class="">
-                        <div class="flex items-center gap-x-1">
-                            <h3 class="text-black">Lesmana</h3>
-                            <x-lucide-circle-minus class="size-4 shrink-0 text-red-600" />
-                        </div>
-                        <p class="text-sm text-gray-800">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Nihil
-                            enim
-                            necessitatibus provident
-                            voluptate vel, soluta expedita quis excepturi praesentium repellat.
-                        </p>
-                        <span class="text-sm text-gray-500">2 Hari yang lalu</span>
-                    </div>
-                    <div class="">
-                        <div class="flex items-center gap-x-1">
-                            <h3 class="text-black">Lesmana</h3>
-                            <x-lucide-circle-minus class="size-4 shrink-0 text-red-600" />
-                        </div>
-                        <p class="text-sm text-gray-800">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Nihil
-                            enim
-                            necessitatibus provident
-                            voluptate vel, soluta expedita quis excepturi praesentium repellat.
-                        </p>
-                        <span class="text-sm text-gray-500">2 Hari yang lalu</span>
-                    </div>
-                    <div class="">
-                        <div class="flex items-center gap-x-1">
-                            <h3 class="text-black">Lesmana</h3>
-                            <x-lucide-circle-minus class="size-4 shrink-0 text-red-600" />
-                        </div>
-                        <p class="text-sm text-gray-800">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Nihil
-                            enim
-                            necessitatibus provident
-                            voluptate vel, soluta expedita quis excepturi praesentium repellat.
-                        </p>
-                        <span class="text-sm text-gray-500">2 Hari yang lalu</span>
-                    </div>
+                    @endforelse
                 </div>
-                <div class="mt-6 flex flex-row justify-center gap-x-4">
-                    <a href="">Previous</a>
-                    <a href="" class="underline underline-offset-4">1</a>
-                    <a href="" class="text-gray-600">2</a>
-                    <a href="">Next</a>
+                <div class="mt-6">
+                    {{ $comments->links(data: ['scrollTo' => false]) }}
                 </div>
             </div>
         </div>
