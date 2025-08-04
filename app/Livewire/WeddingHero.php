@@ -7,6 +7,7 @@ use Livewire\Component;
 class WeddingHero extends Component
 {
     public $guest;
+    public $hero;
 
     public function mount($guest = '')
     {

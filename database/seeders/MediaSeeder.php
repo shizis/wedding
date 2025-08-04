@@ -13,10 +13,22 @@ class MediaSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 1; $i <= 12; $i++) {
+        for ($i = 1; $i <= 9; $i++) {
             Media::factory()->create([
                 'path' => "storage/$i.jpg"
             ]);
         }
+
+        Media::factory()->createMany([
+            [
+                'path' => 'storage/main_image_4.jpg'
+            ],
+            [
+                'path' => 'storage/profile_1.jpg'
+            ],
+            [
+                'path' => 'storage/profile_2.jpg'
+            ],
+        ]);
     }
 }

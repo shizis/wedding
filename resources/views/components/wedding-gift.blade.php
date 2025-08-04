@@ -36,7 +36,7 @@
                     <img src="{{ url('storage/chip-card') }}.png" alt="" class="lg:w-30 w-20">
                 </div>
                 <div class="ml-5">
-                    <p class="font-bold" id="bniNumber">172389</p>
+                    <p class="font-bold" id="bniNumber">1847753715</p>
                     <p>a/n <span class="font-semibold">Amanda Silviyana</span></p>
                 </div>
                 <div class="justify-self-end">

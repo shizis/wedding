@@ -71,16 +71,16 @@
                             <p class="mb-2 mt-1 text-sm text-gray-800">
                                 {{ $comment->comment }}
                             </p>
-                            <span class="text-sm text-gray-500">2 Hari yang lalu</span>
+                            <span class="text-sm text-gray-500">{{ $comment->created_at->diffForHumans() }}</span>
                         </div>
                     @empty
-                        <div>
-                            <p class="capitalize">no comments yet</p>
+                        <div class="text-center">
+                            <p class="capitalize text-neutral-600">no comments yet</p>
                         </div>
                     @endforelse
                 </div>
                 <div class="mt-6">
-                    {{ $comments->links(data: ['scrollTo' => false]) }}
+                    {{ $comments->onEachSide(1)->links(data: ['scrollTo' => false]) }}
                 </div>
             </div>
         </div>
