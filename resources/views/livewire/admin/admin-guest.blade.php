@@ -1,5 +1,45 @@
 <div>
-    <livewire:admin.admin-create-guest />
+    <div class="my-4">
+        <flux:modal.trigger name="create-guest">
+            <flux:button type="button" icon="plus" variant="primary" color="sky">Create Guest</flux:button>
+        </flux:modal.trigger>
+
+        <flux:modal name="create-guest" class="md:w-96">
+            <form wire:submit="setCreate()" id="set-guest" id="set-guest">
+                <div class="space-y-6">
+                    <div>
+                        <flux:heading size="lg">Create New Guest</flux:heading>
+                        <flux:text class="mt-2">Insert new guest name & address.</flux:text>
+                    </div>
+
+                    <flux:field>
+                        <flux:label badge="Required">Name</flux:label>
+                        <flux:input wire:model="form.name" type="text" placeholder="Guest name" required />
+                        <flux:error name="form.name" />
+                    </flux:field>
+
+                    <flux:field>
+                        <flux:label>Address</flux:label>
+                        <flux:input wire:model="form.address" placeholder="Guest Address" type="text" />
+                        <flux:error name="form.address" />
+                    </flux:field>
+
+                    <flux:spacer />
+
+                    <div class="flex w-full gap-x-2">
+                        <flux:button x-on:click="$flux.modals().close()" type="button" variant="filled" class="w-full">
+                            Cancel
+                        </flux:button>
+
+                        <flux:button x-on:click="$wire.$refresh" form="set-guest" type="submit" variant="primary"
+                            color="blue" class="w-full">
+                            Create
+                        </flux:button>
+                    </div>
+                </div>
+            </form>
+        </flux:modal>
+    </div>
 
     <table class="w-full border-separate rounded-md border border-gray-400 dark:border-neutral-600">
         <thead>
@@ -9,7 +49,99 @@
             </tr>
         </thead>
 
-        <livewire:admin.admin-guest-list :$guests />
+        <tbody>
+            @foreach ($guests as $guest)
+                <tr wire:key="{{ $guest->id }}">
+                    <td class="border border-gray-300 px-2 py-4 dark:border-neutral-600">
+                        {{ $guest->name }}
+                    </td>
+                    <td class="border border-gray-300 px-2 py-4 dark:border-neutral-600">
+                        <div class="space-x-2">
+                            <flux:modal.trigger name="edit-guest-{{ $guest->id }}">
+                                <flux:button variant="primary" color="blue" icon="square-pen" tooltip="Edit" />
+                            </flux:modal.trigger>
+
+                            <flux:modal name="edit-guest-{{ $guest->id }}" class="lg:w-104 w-96">
+                                <form wire:submit="setUpdate({{ $guest->id }})" id="edit-guest-{{ $guest->id }}">
+                                    <div class="space-y-6">
+                                        <div>
+                                            <flux:heading size="lg">Update Guest Name</flux:heading>
+                                            <flux:text class="mt-2">Edit guest name.</flux:text>
+                                        </div>
+
+                                        <flux:field>
+                                            <flux:label>From</flux:label>
+                                            <flux:input type="text" variant="filled" value="{{ $guest->name }}"
+                                                readonly />
+                                            <flux:error name="updateForm.name" />
+                                        </flux:field>
+                                        <flux:field>
+                                            <flux:label>To</flux:label>
+                                            <flux:input wire:model="updateForm.name" type="text" value=""
+                                                placeholder="Update name" required />
+                                            <flux:error name="updateForm.name" />
+                                        </flux:field>
+
+                                        <flux:spacer />
+
+                                        <div class="flex w-full gap-x-2">
+                                            <flux:button x-on:click="$flux.modals().close()" type="button"
+                                                variant="filled" class="w-full">
+                                                Cancel
+                                            </flux:button>
+
+                                            <flux:button x-on:click="$wire.$refresh"
+                                                form="edit-guest-{{ $guest->id }}" type="submit" variant="primary"
+                                                color="green" class="w-full">
+                                                Confirm
+                                            </flux:button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </flux:modal>
+
+                            <flux:button variant="primary" color="green" icon="eye" target="_blank"
+                                tooltip="View Page"
+                                href="{{ route('user.guest', [
+                                    'id' => Auth::user()->id,
+                                    'slug' => $guest->slug,
+                                    'uuid' => $guest->uuid,
+                                ]) }}" />
+
+                            <flux:modal.trigger name="destroy-guest-{{ $guest->id }}">
+                                <flux:button variant="primary" color="red" icon="trash" tooltip="Delete" />
+                            </flux:modal.trigger>
+
+                            <flux:modal name="destroy-guest-{{ $guest->id }}" class="lg:w-104 w-96">
+                                <form wire:submit="destroyGuest({{ $guest->id }})"
+                                    id="destroy-guest-{{ $guest->id }}">
+                                    <div class="space-y-6">
+                                        <div>
+                                            <flux:heading size="lg">Delete Guest?</flux:heading>
+                                            <flux:text class="mt-4">Are you sure want to delete guest Name
+                                                {{ $guest->name }} from list?</flux:text>
+                                        </div>
+                                        <flux:spacer />
+                                        <div class="flex w-full gap-x-2">
+                                            <flux:button x-on:click="$flux.modals().cancel()" type="button"
+                                                variant="filled" class="w-full">
+                                                Cancel
+                                            </flux:button>
+
+                                            <flux:button x-on:click="$wire.$refresh"
+                                                form="destroy-guest-{{ $guest->id }}" type="submit"
+                                                variant="primary" color="red" class="w-full">
+                                                Confirm
+                                            </flux:button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </flux:modal>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
 
     </table>
 </div>
