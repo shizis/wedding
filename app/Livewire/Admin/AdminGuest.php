@@ -14,8 +14,7 @@ class AdminGuest extends Component
 
     public function setCreate()
     {
-        dd($this);
-        // $this->form->create();
+        $this->form->create();
     }
 
     public function render()
