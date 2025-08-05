@@ -22,14 +22,14 @@
                 <div class="min-h-50 duration-750 h-full w-1/2 translate-y-20 transform overflow-hidden rounded-b-full rounded-t-full opacity-0 transition-all delay-300 ease-in-out"
                     data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-20 opacity-0">
-                    <img src="{{ asset('storage/profile_1.jpg') }}"
+                    <img src="{{ asset('images/profile_1.jpg') }}"
                         class="size-full scale-150 object-cover object-[bottom_0px_left_18px]">
                 </div>
                 <h3 data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-20 opacity-0"
-                    class="font-italianno delay-300 duration-750 mb-2 mt-4 translate-y-20 transform text-4xl opacity-0 transition-all ease-in-out lg:text-5xl">
+                    class="font-italianno duration-750 mb-2 mt-4 translate-y-20 transform text-4xl opacity-0 transition-all delay-300 ease-in-out lg:text-5xl">
                     Ziqfa Firstzalika Ash-shiddiqi</h3>
                 <span
-                    class="duration-750 delay-300 translate-y-20 transform text-sm opacity-0 transition-all ease-in-out sm:text-base"
+                    class="duration-750 translate-y-20 transform text-sm opacity-0 transition-all delay-300 ease-in-out sm:text-base"
                     data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-20 opacity-0">Putra Pertama Dari Bapak Basuki dan Ibu
                     Minarti</span>
@@ -41,15 +41,15 @@
                 <div class="min-h-50 duration-750 h-full w-1/2 translate-y-20 transform overflow-hidden rounded-b-full rounded-t-full opacity-0 transition-all delay-300 ease-in-out"
                     data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-20 opacity-0">
-                    <img src="{{ asset('storage/profile_2.jpg') }}"
+                    <img src="{{ asset('images/profile_2.jpg') }}"
                         class="size-full scale-150 object-cover object-[bottom_0px_left_5px]">
                 </div>
                 <h3 data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-20 opacity-0"
-                    class="font-italianno delay-300 duration-750 mb-2 mt-4 translate-y-20 transform text-4xl opacity-0 transition-all ease-in-out lg:text-5xl">
+                    class="font-italianno duration-750 mb-2 mt-4 translate-y-20 transform text-4xl opacity-0 transition-all delay-300 ease-in-out lg:text-5xl">
                     Amanda Silviyana S.E</h3>
                 <span data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-20 opacity-0"
-                    class="duration-750 delay-300 translate-y-20 transform text-sm opacity-0 transition-all ease-in-out sm:text-base">Putri
+                    class="duration-750 translate-y-20 transform text-sm opacity-0 transition-all delay-300 ease-in-out sm:text-base">Putri
                     Pertama dari Bapak Warsimin dan Ibu Juwita Ningsih</span>
             </div>
         </div>
