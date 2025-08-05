@@ -28,12 +28,13 @@
                 </div>
                 <div
                     class="col-span-full row-span-1 self-end justify-self-center pb-20 text-center lg:col-span-11 lg:justify-self-end lg:text-start">
-                    <div class="transform space-y-4 transition-transform ease-in" data-observe>
+                    <div class="space-y-4" data-observe>
                         <p data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-10 opacity-0"
-                            class="translate-y-10 text-xs text-white opacity-0 delay-200 duration-1000 sm:text-sm lg:text-base">
+                            class="translate-y-10 transform text-xs text-white opacity-0 transition-all delay-200 duration-1000 ease-in-out sm:text-sm lg:text-base">
                             Kepada Yth. Bapak/Ibu/Saudara/i </p>
-                        <div class="w-full delay-300 duration-1000" data-class-in="visible translate-y-0 opacity-100"
+                        <div class="w-full translate-y-20 transform opacity-0 transition-all delay-300 duration-1000 ease-in-out"
+                            data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-20 opacity-0">
                             <p class="text-base font-semibold text-white sm:text-lg lg:text-xl" id="guessName">
                                 {{ $guest->name ?? $guest }}
