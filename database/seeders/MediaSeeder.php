@@ -34,10 +34,6 @@ class MediaSeeder extends Seeder
         ]);
 
         $permissions = [
-            'users.view',
-            'users.create',
-            'users.edit',
-            'users.delete',
             'roles.view',
             'roles.create',
             'roles.edit',

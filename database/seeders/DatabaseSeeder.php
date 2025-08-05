@@ -35,10 +35,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $permissions = [
-            'users.view',
-            'users.create',
-            'users.edit',
-            'users.delete',
             'roles.view',
             'roles.create',
             'roles.edit',
@@ -61,7 +57,6 @@ class DatabaseSeeder extends Seeder
         $shizi->assignRole('Super-Admin');
 
         $user = Role::create(['name' => 'user']);
-        $user->givePermissionTo('users.view');
         $user->givePermissionTo('roles.view');
 
 
