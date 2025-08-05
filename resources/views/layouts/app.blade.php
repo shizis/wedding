@@ -24,7 +24,7 @@
         @livewireStyles()
     </head>
 
-    <body class="font-poppins min-h-screen antialiased">
+    <body class="font-poppins min-h-screen touch-pan-y overflow-x-hidden antialiased">
         <!-- Page Content -->
         <main class="">
             {{ $slot }}
