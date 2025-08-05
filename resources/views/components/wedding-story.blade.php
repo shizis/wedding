@@ -6,7 +6,7 @@
                 Love Story
             </h2>
         </div>
-        <div class="mt-4 space-y-6 text-start" data-observe>
+        <div class="mt-4 space-y-6 text-center lg:text-start" data-observe>
             <div class="duration-750 translate-x-20 transform space-y-4 rounded-md bg-rose-100 p-4 opacity-0 transition-all delay-200 ease-in-out"
                 data-class-in="visible translate-x-0 opacity-100" data-class-out="invisble translate-x-20 opacity-0"
                 data-observe>
