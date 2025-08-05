@@ -3,7 +3,7 @@
         <div class="flex h-svh place-content-center" data-observe>
             <img src="{{ asset($hero) }}" alt="" data-class-in="visible translate-y-0 opacity-100"
                 data-class-out="invisble -translate-y-50 opacity-0"
-                class="-translate-y-50 duration-750 h-svh max-h-svh w-full transform object-cover object-[50%_45%] opacity-0 transition-all delay-500 ease-in-out">
+                class="-translate-y-50 h-svh max-h-svh w-full transform object-cover object-[50%_45%] opacity-0 transition-all delay-500 duration-1000 ease-in-out">
         </div>
         {{-- <div class="absolute inset-0 h-full bg-black/35"></div> --}}
         <div class="absolute inset-x-0 bottom-0 h-2/4 bg-gradient-to-t from-black to-transparent"></div>
@@ -12,14 +12,14 @@
             <div class="relative grid w-full grid-cols-12 grid-rows-2 p-10">
                 <div class="justify-self-center-safe col-span-full row-span-1 lg:justify-self-start">
                     <div class="flex w-fit flex-col" data-observe>
-                        <div class="duration-750 mb-1 -translate-x-20 transform opacity-0 transition-all delay-300 ease-in-out"
+                        <div class="mb-1 -translate-x-20 transform opacity-0 transition-all delay-300 duration-1000 ease-in-out"
                             data-class-in="visible translate-x-0 opacity-100"
                             data-class-out="invisble -translate-x-20 opacity-0">
                             <p class="text-shadow-sm text-sm font-normal text-white sm:text-base lg:text-lg">
                                 The Wedding of
                             </p>
                         </div>
-                        <h1 class="font-italianno text-shadow-sm duration-750 -translate-x-20 transform text-7xl text-white opacity-0 transition-all delay-300 ease-in-out sm:text-8xl lg:text-9xl"
+                        <h1 class="font-italianno text-shadow-sm -translate-x-20 transform text-7xl text-white opacity-0 transition-all delay-300 duration-1000 ease-in-out sm:text-8xl lg:text-9xl"
                             data-class-in="visible translate-x-0 opacity-100"
                             data-class-out="invisble -translate-x-20 opacity-0">
                             Ziqfa & Silvi
@@ -31,9 +31,9 @@
                     <div class="transform space-y-4 transition-transform ease-in" data-observe>
                         <p data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-10 opacity-0"
-                            class="duration-750 translate-y-10 text-xs text-white opacity-0 delay-200 sm:text-sm lg:text-base">
+                            class="translate-y-10 text-xs text-white opacity-0 delay-200 duration-1000 sm:text-sm lg:text-base">
                             Kepada Yth. Bapak/Ibu/Saudara/i </p>
-                        <div class="duration-750 w-full delay-300" data-class-in="visible translate-y-0 opacity-100"
+                        <div class="w-full delay-300 duration-1000" data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-20 opacity-0">
                             <p class="text-base font-semibold text-white sm:text-lg lg:text-xl" id="guessName">
                                 {{ $guest->name ?? $guest }}

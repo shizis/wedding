@@ -6,9 +6,9 @@
         <div class="mx-auto max-w-screen-md px-4 pt-8 text-center">
             <div class="" data-observe>
                 <p data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-20 opacity-0"
-                    class="font-amiri duration-750 mb-8 translate-y-20 transform text-lg opacity-0 transition-all delay-200 ease-in-out md:text-xl lg:text-2xl">
+                    class="font-amiri mb-8 translate-y-20 transform text-lg opacity-0 transition-all delay-200 duration-1000 ease-in-out md:text-xl lg:text-2xl">
                     &#65021;</p>
-                <p class="duration-750 mb-4 translate-y-20 text-pretty text-sm opacity-0 delay-300 sm:text-base"
+                <p class="mb-4 translate-y-20 text-pretty text-sm opacity-0 delay-300 duration-1000 sm:text-base"
                     data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-20 opacity-0">
                     "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan
                     pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa
@@ -16,7 +16,7 @@
                     sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
                     tanda-tanda (kebesaran Allah) bagi kaum yang berpikir"
                 </p>
-                <p class="translate-y-25 delay-350 duration-750 text-sm italic text-gray-600 opacity-0 sm:text-base"
+                <p class="translate-y-25 delay-350 text-sm italic text-gray-600 opacity-0 duration-1000 sm:text-base"
                     data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-25 opacity-0">
                     QS. Ar-rum:21
