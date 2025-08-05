@@ -1,11 +1,13 @@
 <x-app-layout>
 
+    <livewire:wedding-hero class="z-50" :guest="$guest ?? ''" :hero="$media[0]->path" />
+
     <audio id="music" preload="auto">
         <source src="{{ asset('audio/TiaraAndini,ArsyWidianto-LaguPernikahanKita.mp3') }}" type="audio/mpeg">
     </audio>
     <!-- Floating Music Control Button -->
     <div id="musicControl"
-        class="fixed bottom-5 right-5 z-40 cursor-pointer rounded-full bg-rose-400 p-3 text-white shadow-lg hover:bg-rose-500">
+        class="fixed bottom-5 right-5 z-30 cursor-pointer rounded-full bg-rose-400 p-3 text-white shadow-lg hover:bg-rose-500">
         <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -19,8 +21,6 @@
                 d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
     </div>
-
-    <livewire:wedding-hero class="z-50" :guest="$guest ?? ''" :hero="$media[0]->path" />
 
     <section id="first">
         <div class="mx-auto max-w-screen-md px-4 pt-8 text-center">
@@ -127,8 +127,8 @@
         window.removeEventListener('touchmove', preventScroll);
 
         // Sembunyikan tombol buka undangan
-        openInvitationBtn.parentElement.classList.remove('inline-flex');
-        openInvitationBtn.parentElement.classList.add('hidden');
+        // openInvitationBtn.parentElement.classList.remove('inline-flex');
+        // openInvitationBtn.parentElement.classList.add('hidden');
     });
 
     // Toggle music play/pause dengan floating button
