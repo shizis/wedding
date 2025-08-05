@@ -12,40 +12,44 @@
             <div class="relative grid w-full grid-cols-12 grid-rows-2 p-10">
                 <div class="justify-self-center-safe col-span-full row-span-1 lg:justify-self-start">
                     <div class="flex w-fit flex-col" data-observe>
-                        <div class="mb-1 -translate-x-20 transform opacity-0 transition-all delay-300 duration-1000 ease-in-out"
+                        <div class="mb-1 -translate-x-40 transform opacity-0 transition-all delay-300 duration-1000 ease-in-out"
                             data-class-in="visible translate-x-0 opacity-100"
-                            data-class-out="invisble -translate-x-20 opacity-0">
-                            <p class="text-shadow-sm text-sm font-normal text-white sm:text-base lg:text-lg">
+                            data-class-out="invisble -translate-x-40 opacity-0">
+                            <flux:text class="text-shadow-sm text-sm font-normal text-gray-50 sm:text-base lg:text-lg">
                                 The Wedding of
-                            </p>
+                            </flux:text>
                         </div>
-                        <h1 class="font-italianno text-shadow-sm -translate-x-20 transform text-7xl text-white opacity-0 transition-all delay-300 duration-1000 ease-in-out sm:text-8xl lg:text-9xl"
+                        <flux:heading level="1"
+                            class="font-italianno text-shadow-sm -translate-x-30 transform text-7xl text-white opacity-0 transition-all delay-200 duration-1000 ease-in-out sm:text-8xl lg:text-9xl"
                             data-class-in="visible translate-x-0 opacity-100"
-                            data-class-out="invisble -translate-x-20 opacity-0">
+                            data-class-out="invisble -translate-x-30 opacity-0">
                             Ziqfa & Silvi
-                        </h1>
+                        </flux:heading>
                     </div>
                 </div>
                 <div
                     class="col-span-full row-span-1 self-end justify-self-center pb-20 text-center lg:col-span-11 lg:justify-self-end lg:text-start">
                     <div class="space-y-4" data-observe>
-                        <p data-class-in="visible translate-y-0 opacity-100"
+                        <flux:text data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-10 opacity-0"
-                            class="translate-y-10 transform text-xs text-white opacity-0 transition-all delay-200 duration-1000 ease-in-out sm:text-sm lg:text-base">
-                            Kepada Yth. Bapak/Ibu/Saudara/i </p>
+                            class="translate-y-10 transform text-xs text-gray-200 opacity-0 transition-all delay-200 duration-1000 ease-in-out sm:text-sm lg:text-base">
+                            Kepada Yth. Bapak/Ibu/Saudara/i
+                        </flux:text>
                         <div class="w-full translate-y-20 transform opacity-0 transition-all delay-300 duration-1000 ease-in-out"
                             data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-20 opacity-0">
-                            <p class="text-base font-semibold text-white sm:text-lg lg:text-xl" id="guessName">
+                            <flux:heading level="2"
+                                class="text-base font-semibold text-white sm:text-lg lg:text-xl" id="guessName">
                                 {{ $guest->name ?? $guest }}
-                            </p>
+                            </flux:heading>
                         </div>
                     </div>
                 </div>
                 <div class="absolute inset-x-0 bottom-10 w-full animate-bounce text-center">
-                    <a href="#first" target="_self" class="inline-flex text-white">
-                        <x-heroicon-s-arrow-small-down class="size-5 md:size-6" />
-                    </a>
+                    <flux:button class="text-white" as="a" variant="ghost" href="#first" target="_self"
+                        square="false" class="hover:bg-transparent hover:dark:bg-transparent">
+                        <flux:icon.arrow-down class="size-5 text-white lg:size-6" />
+                    </flux:button>
                 </div>
             </div>
         </div>

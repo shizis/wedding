@@ -20,16 +20,15 @@
             }
         </style>
         @vite(['resources/css/app.css'])
-
-        @livewireStyles()
+        @fluxAppearance
     </head>
 
-    <body class="font-poppins min-h-screen touch-pan-y overflow-x-hidden antialiased">
+    <body class="font-poppins min-h-screen touch-pan-y overflow-x-hidden bg-white antialiased">
         <!-- Page Content -->
         <main class="">
             {{ $slot }}
         </main>
-        @livewireScripts()
+        @fluxScripts
         @vite(['resources/js/app.js'])
     </body>
 

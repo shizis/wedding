@@ -6,7 +6,7 @@
             </h2>
         </div>
 
-        <!-- Image Grid -->
+        {{-- <!-- Image Grid -->
         <div class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
             @foreach ($media as $index => $img)
                 <div class="group relative cursor-pointer" x-on:click="$wire.openModal({{ $index }})"
@@ -26,11 +26,62 @@
                     </div>
                 </div>
             @endforeach
+        </div> --}}
+
+        <!-- Image Grid -->
+        <div class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
+            @foreach ($media as $img)
+                {{-- <div class="group relative cursor-pointer" wire:key="{{ $img->id }}">
+                    <div
+                        class="aspect-square overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                        <img src="{{ asset($img->path) }}" alt="Gallery image {{ $index + 1 }}"
+                            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <!-- Hover overlay -->
+                    <div
+                        class="absolute inset-0 flex items-center justify-center rounded-lg bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div> --}}
+                <div wire:key="{{ $img->id }}">
+                    <flux:modal.trigger name="gallery-{{ $img->id }}">
+                        <div class="group relative cursor-pointer" data-observe>
+                            <div class="aspect-square translate-y-20 transform overflow-hidden rounded-lg opacity-0 shadow-md transition-all delay-200 duration-1000"
+                                data-class-in="visible translate-y-0 opacity-100"
+                                data-class-out="invisble translate-y-20 opacity-0">
+                                <img src="{{ asset($img->path) }}"
+                                    class="size-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center rounded-lg bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </flux:modal.trigger>
+
+                    <flux:modal variant="bare" class="" name="gallery-{{ $img->id }}">
+                        <div class="relative mx-auto flex max-h-[90vh] max-w-7xl items-center justify-center">
+                            <div class="relative">
+                                <img src="{{ asset($img->path) }}" alt=""
+                                    class="size-full max-h-[90vh] max-w-full rounded-lg object-cover object-center">
+                            </div>
+                        </div>
+                    </flux:modal>
+                </div>
+            @endforeach
         </div>
     </div>
 
     <!-- Modal -->
-    @teleport('body')
+    {{-- @teleport('body')
         <div x-data="{
             show: @entangle('showModal'),
             selectedIndex: @entangle('selectedImageIndex'),
@@ -102,5 +153,5 @@
                 </div>
             </div>
         </div>
-    @endteleport
+    @endteleport --}}
 </section>

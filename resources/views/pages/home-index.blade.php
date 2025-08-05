@@ -5,22 +5,26 @@
     <section id="first">
         <div class="mx-auto max-w-screen-md px-4 pt-8 text-center">
             <div class="" data-observe>
-                <p data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-20 opacity-0"
-                    class="font-amiri mb-8 translate-y-20 transform text-lg opacity-0 transition-all delay-200 duration-1000 ease-in-out md:text-xl lg:text-2xl">
-                    &#65021;</p>
-                <p class="mb-4 translate-y-20 text-pretty text-sm opacity-0 delay-300 duration-1000 sm:text-base"
+                <flux:heading level="2" data-class-in="visible translate-y-0 opacity-100"
+                    data-class-out="invisble translate-y-20 opacity-0"
+                    class="font-amiri mb-8 translate-y-20 transform text-lg text-black opacity-0 transition-all delay-200 duration-1000 ease-in-out md:text-xl lg:text-2xl">
+                    &#65021;
+                </flux:heading>
+                <flux:text
+                    class="mb-4 translate-y-20 text-pretty text-sm text-gray-700 opacity-0 delay-300 duration-1000 sm:text-base"
                     data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-20 opacity-0">
                     "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan
                     pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa
                     tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih
                     sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
                     tanda-tanda (kebesaran Allah) bagi kaum yang berpikir"
-                </p>
-                <p class="translate-y-25 delay-350 text-sm italic text-gray-600 opacity-0 duration-1000 sm:text-base"
+                </flux:text>
+                <flux:text
+                    class="translate-y-25 delay-350 text-sm italic text-gray-500 opacity-0 duration-1000 sm:text-base"
                     data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-25 opacity-0">
                     QS. Ar-rum:21
-                </p>
+                </flux:text>
             </div>
         </div>
     </section>
@@ -43,6 +47,11 @@
             <span class="mx-1"><a href="">ZiqfaAshshiddiqi</a></span>
         </div>
     </footer>
+
+    <div class="fixed bottom-10 right-10">
+        <flux:button x-data x-on:click="$flux.dark = ! $flux.dark">Toggle</flux:button>
+    </div>
+
 </x-app-layout>
 
 <script>

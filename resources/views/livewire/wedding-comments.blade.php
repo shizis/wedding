@@ -51,7 +51,7 @@
 
                 <div class="flex w-full justify-end">
                     <button type="submit" form="set-comment" wire:click="$refresh" wire:loading.attr="disabled"
-                        class="mt-8 cursor-pointer self-end rounded-full bg-[#D76C82] px-6 py-2 text-center text-sm font-semibold text-white disabled:opacity-50">
+                        class="mt-8 cursor-pointer self-end rounded-full bg-rose-400 px-6 py-2 text-center text-sm font-semibold text-white hover:bg-rose-500 disabled:opacity-50">
                         Kirim
                     </button>
                 </div>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="mt-8 flex w-full flex-col">
-            <span class="mb-4">Comments</span>
+            <span class="mb-4 text-black">Comments</span>
             <div class="rounded-lg border border-gray-300 bg-white p-4">
                 <div class="flex w-full flex-col gap-y-6 text-start" wire:loading.class="opacity-50">
                     @forelse ($comments as $comment)
@@ -68,14 +68,14 @@
                                 <h3 class="text-black">{{ $comment->guests->name }}</h3>
                                 <x-lucide-circle-check class="size-5 shrink-0 text-green-600" />
                             </div>
-                            <p class="mb-2 mt-1 text-sm text-gray-800">
+                            <p class="mb-2 mt-1 text-sm text-gray-700">
                                 {{ $comment->comment }}
                             </p>
                             <span class="text-sm text-gray-500">{{ $comment->created_at->diffForHumans() }}</span>
                         </div>
                     @empty
                         <div class="text-center">
-                            <p class="capitalize text-neutral-600">no comments yet</p>
+                            <p class="capitalize text-neutral-700">no comments yet</p>
                         </div>
                     @endforelse
                 </div>

@@ -6,7 +6,7 @@
             </h2>
         </div>
         <div class="mx-auto mt-6 max-w-md">
-            <p class="text-sm">
+            <p class="text-sm text-gray-700">
                 Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah
                 pernikahan
                 dapat melalui virtual
@@ -16,12 +16,8 @@
         <div x-data="{ open: false }" class="mt-4">
             <div class="grid justify-items-center">
                 <button x-on:click="open = !open"
-                    class="bg-angga-laras-button-active text-angga-laras-black hover:bg-angga-laras-button-hover grid cursor-pointer grid-flow-col items-center gap-2 rounded-full px-6 py-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
-                    </svg>
+                    class="grid cursor-pointer grid-flow-col items-center gap-2 rounded-full bg-rose-400 px-4 py-2 text-white hover:bg-rose-500">
+                    <x-lucide-gift class="size-6 shrink-0" />
                     <p class="text-sm">
                         Kirim Hadiah
                     </p>
@@ -35,14 +31,14 @@
                 <div class="justify-self-start">
                     <img src="{{ url('images/chip-card') }}.png" alt="" class="lg:w-30 w-20">
                 </div>
-                <div class="ml-5 text-start">
+                <div class="ml-5 text-start text-black">
                     <p class="font-bold" id="bniNumber">1847753715</p>
                     <p>a/n <span class="font-semibold">Amanda Silviyana</span></p>
                 </div>
                 <div class="justify-self-end">
                     <div>
                         <button data-copy-button data-copy-target="bniNumber"
-                            class="text-angga-laras-white inset-shadow-xs cursor-pointer rounded-full bg-orange-600 px-6 py-2 shadow-sm hover:bg-orange-500">
+                            class="text-angga-laras-white inset-shadow-xs cursor-pointer rounded-full bg-orange-600 px-6 py-2 text-gray-100 shadow-sm hover:bg-orange-500">
                             Copy
                         </button>
                     </div>
