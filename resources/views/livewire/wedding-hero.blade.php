@@ -1,4 +1,4 @@
-<header class="z-120 h-svh max-h-svh w-full">
+<header class="h-svh max-h-svh w-full">
     <div class="relative">
         <div class="flex h-svh place-content-center" data-observe>
             <img src="{{ asset($hero) }}" alt="" data-class-in="visible translate-y-0 opacity-100"
