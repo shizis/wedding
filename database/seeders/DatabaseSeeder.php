@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Media;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,6 +16,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        for ($i = 1; $i <= 9; $i++) {
+            Media::factory()->create([
+                'path' => "storage/$i.jpg"
+            ]);
+        }
+
+        Media::factory()->createMany([
+            [
+                'path' => 'storage/main_image_4.jpg'
+            ],
+            [
+                'path' => 'storage/profile_1.jpg'
+            ],
+            [
+                'path' => 'storage/profile_2.jpg'
+            ],
+        ]);
 
         $permissions = [
             'users.view',
