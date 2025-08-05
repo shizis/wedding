@@ -15,33 +15,31 @@
                         <div class="mb-1 -translate-x-40 transform opacity-0 transition-all delay-300 duration-1000 ease-in-out"
                             data-class-in="visible translate-x-0 opacity-100"
                             data-class-out="invisble -translate-x-40 opacity-0">
-                            <flux:text class="text-shadow-sm text-sm font-normal text-gray-50 sm:text-base lg:text-lg">
+                            <p class="text-shadow-sm text-sm font-normal text-gray-50 sm:text-base lg:text-lg">
                                 The Wedding of
-                            </flux:text>
+                            </p>
                         </div>
-                        <flux:heading level="1"
-                            class="font-italianno text-shadow-sm -translate-x-30 transform text-7xl text-white opacity-0 transition-all delay-200 duration-1000 ease-in-out sm:text-8xl lg:text-9xl"
+                        <h1 class="font-italianno text-shadow-sm -translate-x-30 transform text-7xl text-white opacity-0 transition-all delay-200 duration-1000 ease-in-out sm:text-8xl lg:text-9xl"
                             data-class-in="visible translate-x-0 opacity-100"
                             data-class-out="invisble -translate-x-30 opacity-0">
                             Ziqfa & Silvi
-                        </flux:heading>
+                        </h1>
                     </div>
                 </div>
                 <div
                     class="col-span-full row-span-1 self-end justify-self-center pb-20 text-center lg:col-span-11 lg:justify-self-end lg:text-start">
                     <div class="space-y-4" data-observe>
-                        <flux:text data-class-in="visible translate-y-0 opacity-100"
+                        <p data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-10 opacity-0"
                             class="translate-y-10 transform text-xs text-gray-200 opacity-0 transition-all delay-200 duration-1000 ease-in-out sm:text-sm lg:text-base">
                             Kepada Yth. Bapak/Ibu/Saudara/i
-                        </flux:text>
+                        </p>
                         <div class="w-full translate-y-20 transform opacity-0 transition-all delay-300 duration-1000 ease-in-out"
                             data-class-in="visible translate-y-0 opacity-100"
                             data-class-out="invisble translate-y-20 opacity-0">
-                            <flux:heading level="2"
-                                class="text-base font-semibold text-white sm:text-lg lg:text-xl" id="guessName">
+                            <h2 class="text-base font-semibold text-white sm:text-lg lg:text-xl" id="guessName">
                                 {{ $guest->name ?? $guest }}
-                            </flux:heading>
+                            </h2>
                         </div>
                     </div>
                 </div>

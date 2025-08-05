@@ -23,7 +23,7 @@
         @fluxAppearance
     </head>
 
-    <body class="font-poppins min-h-screen touch-pan-y overflow-x-hidden bg-white antialiased">
+    <body class="font-poppins bg-white antialiased">
         <!-- Page Content -->
         <main class="">
             {{ $slot }}
