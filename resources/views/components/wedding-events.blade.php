@@ -1,5 +1,5 @@
 <section class="mt-8 w-full bg-rose-100 py-4" id="our_wedding">
-    <div class="mx-auto w-full max-w-(--breakpoint-2xl) px-4">
+    <div class="max-w-(--breakpoint-2xl) mx-auto w-full px-4">
         <div class="flex w-full flex-col gap-4 text-center">
             <div class="w-fit self-center" data-observe>
                 <h2 class="font-italianno transform text-5xl text-black opacity-0 transition-all delay-200 duration-1000 ease-in-out lg:text-6xl"
