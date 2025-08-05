@@ -24,11 +24,6 @@
                             data-class-out="invisble -translate-x-20 opacity-0">
                             Ziqfa & Silvi
                         </h1>
-                        <div class="delay-350 duration-750 translate-y-20 transform self-center opacity-0 transition-all ease-in-out"
-                            data-class-in="visible translate-y-0 opacity-100"
-                            data-class-out="invisble translate-y-20 opacity-0">
-                            <p class="text-shadow-sm text-sm text-white sm:text-base lg:text-lg">08.08.2025</p>
-                        </div>
                     </div>
                 </div>
                 <div

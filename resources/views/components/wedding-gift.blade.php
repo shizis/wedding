@@ -30,10 +30,10 @@
             <div x-show="open" x-cloak
                 class="bg-linear-to-t/oklch inset-shadow-sm relative z-10 mx-auto mt-4 grid h-max max-w-md gap-2 rounded-xl from-amber-400/50 to-[#f15a23]/50 p-4 shadow-lg backdrop-blur-sm">
                 <div class="justify-self-end">
-                    <img src="{{ url('storage/BNI_logo.svg') }}" alt="" class="w-25 lg:w-30">
+                    <img src="{{ url('images/BNI_logo.svg') }}" alt="" class="w-25 lg:w-30">
                 </div>
                 <div class="justify-self-start">
-                    <img src="{{ url('storage/chip-card') }}.png" alt="" class="lg:w-30 w-20">
+                    <img src="{{ url('images/chip-card') }}.png" alt="" class="lg:w-30 w-20">
                 </div>
                 <div class="ml-5 text-start">
                     <p class="font-bold" id="bniNumber">1847753715</p>

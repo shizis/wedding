@@ -17,19 +17,19 @@ class MediaSeeder extends Seeder
     {
         for ($i = 1; $i <= 9; $i++) {
             Media::create([
-                'path' => "storage/$i.jpg"
+                'path' => "images/$i.jpg"
             ]);
         }
 
         Media::create([
             [
-                'path' => 'storage/main_image_4.jpg'
+                'path' => 'images/main_image_4.jpg'
             ],
             [
-                'path' => 'storage/profile_1.jpg'
+                'path' => 'images/profile_1.jpg'
             ],
             [
-                'path' => 'storage/profile_2.jpg'
+                'path' => 'images/profile_2.jpg'
             ],
         ]);
 
