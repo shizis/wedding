@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Media;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class MediaSeeder extends Seeder
 {
@@ -14,12 +16,12 @@ class MediaSeeder extends Seeder
     public function run(): void
     {
         for ($i = 1; $i <= 9; $i++) {
-            Media::factory()->create([
+            Media::create([
                 'path' => "storage/$i.jpg"
             ]);
         }
 
-        Media::factory()->createMany([
+        Media::create([
             [
                 'path' => 'storage/main_image_4.jpg'
             ],
@@ -30,5 +32,35 @@ class MediaSeeder extends Seeder
                 'path' => 'storage/profile_2.jpg'
             ],
         ]);
+
+        $permissions = [
+            'users.view',
+            'users.create',
+            'users.edit',
+            'users.delete',
+            'roles.view',
+            'roles.create',
+            'roles.edit',
+            'roles.delete',
+        ];
+
+        foreach ($permissions as $key => $value) {
+            Permission::create(['name' => $value]);
+        }
+
+        $superAdmin = Role::create(['name' => 'Super-Admin']);
+
+        $shizi = User::create(
+            [
+                'name' => 'shizi',
+                'password' => 'shizi2411',
+                'email' => 'shizi@gmail.com'
+            ]
+        );
+        $shizi->assignRole('Super-Admin');
+
+        $user = Role::create(['name' => 'user']);
+        $user->givePermissionTo('users.view');
+        $user->givePermissionTo('roles.view');
     }
 }
