@@ -11,9 +11,9 @@ Route::get("/{id}/to/{slug}/{uuid}", [UserController::class, 'guest'])
     ->whereUuid('uuid');
 
 Route::prefix('admin')
+    ->middleware(['role:Super-Admin'])
     ->controller(AdminController::class)
     ->group(function () {
         Route::get('/', 'index')->name('admin.index');
         Route::get('/guests', 'guests')->name('admin.guests');
-    })
-    ->middleware('auth');
+    });
