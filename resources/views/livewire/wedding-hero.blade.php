@@ -6,8 +6,8 @@
                 class="-translate-y-50 h-svh max-h-svh w-full transform object-cover object-[50%_45%] opacity-0 transition-all delay-500 duration-1000 ease-in-out">
         </div>
         {{-- <div class="absolute inset-0 h-full bg-black/35"></div> --}}
-        <div class="absolute inset-x-0 bottom-0 h-2/4 bg-gradient-to-t from-black to-transparent"></div>
-        <div class="absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-black/50 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 h-2/4 bg-linear-to-t from-black to-transparent"></div>
+        <div class="absolute inset-x-0 top-0 h-1/4 bg-linear-to-b from-black/50 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 mx-auto flex h-full place-content-center">
             <div class="relative grid w-full grid-cols-12 grid-rows-2 p-10">
                 <div class="justify-self-center-safe col-span-full row-span-1 lg:justify-self-start">

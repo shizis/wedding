@@ -1,4 +1,4 @@
-<section class="mx-auto mt-8 w-full max-w-screen-lg px-4" id="our_wedding">
+<section class="mx-auto mt-8 w-full max-w-(--breakpoint-lg) px-4" id="our_wedding">
     <div class="flex w-full flex-col gap-y-6 text-center">
         <div class="w-fit self-center" data-observe>
             <h2 data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-20 opacity-0"

@@ -1,5 +1,5 @@
 <section class="mt-10 w-full bg-pink-100 py-10" id="our_wedding">
-    <div class="mx-auto max-w-screen-md px-4">
+    <div class="mx-auto max-w-(--breakpoint-md) px-4">
         <div class="flex w-full flex-col gap-y-6 text-center">
             <div class="w-fit self-center">
                 <h2 class="font-italianno text-5xl text-black lg:text-6xl">

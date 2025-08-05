@@ -1,4 +1,4 @@
-<section class="mx-auto mt-10 w-full max-w-screen-md" id="our_wedding">
+<section class="mx-auto mt-10 w-full max-w-(--breakpoint-md)" id="our_wedding">
     <div class="flex w-full flex-col px-4 text-center">
         <div class="w-fit self-center" data-observe>
             <h2 class="font-italianno translate-y-10 transform text-5xl text-black opacity-0 transition-all delay-200 duration-1000 ease-in-out lg:text-6xl"

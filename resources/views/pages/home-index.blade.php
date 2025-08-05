@@ -23,7 +23,7 @@
     </div>
 
     <section id="first">
-        <div class="mx-auto max-w-screen-md px-4 pt-8 text-center">
+        <div class="mx-auto max-w-(--breakpoint-md) px-4 pt-8 text-center">
             <div class="" data-observe>
                 <flux:heading level="2" data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-20 opacity-0"
