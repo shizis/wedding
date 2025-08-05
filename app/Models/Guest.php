@@ -16,6 +16,7 @@ class Guest extends Model
     use HasUuids;
 
     protected $fillable = [
+        'user_id',
         'name',
         'slug',
         'address'

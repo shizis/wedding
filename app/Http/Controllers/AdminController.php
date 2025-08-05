@@ -23,11 +23,6 @@ class AdminController extends Controller
             return to_route('user.index');
         }
 
-        $user = User::find(1);
-        $guests = $user->guests->all();
-
-        return view('admin.pages.admin-guests', compact([
-            'guests'
-        ]));
+        return view('admin.pages.admin-guests');
     }
 }

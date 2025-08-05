@@ -42,11 +42,6 @@ class WeddingForm extends Form
         ]);
     }
 
-    public function updated()
-    {
-        dd($this);
-    }
-
     public function setValue($guest)
     {
         $this->guest = $guest['name'];
