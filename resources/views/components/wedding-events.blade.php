@@ -38,7 +38,7 @@
                     <div class="delay-350 flex translate-y-20 transform items-center gap-x-2 text-start opacity-0 transition-all duration-1000 ease-in-out"data-class-in="visible translate-y-0 opacity-100"
                         data-class-out="invisble translate-y-20 opacity-0">
                         <x-lucide-map-pinned class="size-6 shrink-0" />
-                        <p>Mushola Baiturrahman Desa Gunung Labu</p>
+                        <p>Kediaman Mempelai Wanita Desa Gunung Labu</p>
                     </div>
                 </div>
                 <div class="translate-y-15 flex transform flex-col gap-y-4 rounded-lg bg-[#D76C82]/30 p-4 opacity-0 shadow-sm transition-all delay-100 duration-1000 ease-in-out"
@@ -61,7 +61,7 @@
                     <div class="delay-350 flex translate-y-20 transform items-center gap-x-2 text-start opacity-0 transition-all duration-1000 ease-in-out"data-class-in="visible translate-y-0 opacity-100"
                         data-class-out="invisble translate-y-20 opacity-0">
                         <x-lucide-map-pinned class="size-6 shrink-0" />
-                        <p>Kediaman Mempelai Wanita</p>
+                        <p>Kediaman Mempelai Wanita Desa Gunung Labu</p>
                     </div>
                 </div>
                 <div class="translate-y-15 flex transform flex-col gap-y-4 rounded-lg bg-[#D76C82]/30 p-4 opacity-0 shadow-sm transition-all delay-100 duration-1000 ease-in-out"
@@ -84,7 +84,7 @@
                     <div class="delay-350 flex translate-y-20 transform items-center gap-x-2 text-start opacity-0 transition-all duration-1000 ease-in-out"data-class-in="visible translate-y-0 opacity-100"
                         data-class-out="invisble translate-y-20 opacity-0">
                         <x-lucide-map-pinned class="size-6 shrink-0" />
-                        <p>Kediaman Mempelai Pria</p>
+                        <p>Kediaman Mempelai Pria Desa Batang Sangir</p>
                     </div>
                 </div>
             </div>
