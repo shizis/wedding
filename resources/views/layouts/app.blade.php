@@ -13,19 +13,19 @@
         <meta name="robots" content="noindex,nofollow" />
         <meta name="googlebot-news" content="noindex" />
         <meta name="google" content="notranslate">
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="{{ url('/') }}" />
 
         <title>{{ isset($title) ? "$title - " . config('app.name') : config('app.name') }}</title>
 
         <meta name="title" content="The Wedding of Ziqfa &amp; Silvi">
         <meta name="description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
-        <meta name="url" content="/" />
-        <meta name="identifier-URL" content="/" />
+        <meta name="url" content="{{ url('/') }}" />
+        <meta name="identifier-URL" content="{{ url('/') }}" />
         <meta name="keywords" content="wedding website, ziqfa silvi," />
 
         <meta name="og:title" content="The Wedding of Ziqfa &amp; Silvi" />
         <meta name="og:type" content="website" />
-        <meta name="og:url" content="/" />
+        <meta name="og:url" content="{{ url('/') }}" />
         <meta name="og:image" content="{{ asset('images/2.jpg') }}" />
         <meta name="og:site_name" content="wedding ziqfa &amp; silvi" />
         <meta name="og:description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
