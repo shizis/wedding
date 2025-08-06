@@ -6,13 +6,13 @@ use App\Livewire\Forms\AdminCreateForm;
 use App\Livewire\Forms\AdminUpdateGuestForm;
 use App\Models\Guest;
 use Livewire\Component;
+use Livewire\WithoutUrlPagination;
 use Livewire\WithPagination;
 
 class AdminGuest extends Component
 {
-    use WithPagination;
+    use WithPagination, WithoutUrlPagination;
 
-    public $guests;
     public AdminCreateForm $form;
     public AdminUpdateGuestForm $updateForm;
 
@@ -35,8 +35,10 @@ class AdminGuest extends Component
 
     public function render()
     {
-        $this->guests = Guest::all();
+        $guests = Guest::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('livewire.admin.admin-guest');
+        return view('livewire.admin.admin-guest', compact([
+            'guests'
+        ]));
     }
 }
