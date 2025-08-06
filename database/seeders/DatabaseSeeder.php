@@ -49,9 +49,9 @@ class DatabaseSeeder extends Seeder
 
         $shizi = User::factory()->create(
             [
-                'name' => 'shizi',
-                'password' => 'shizi2411',
-                'email' => 'shizi@gmail.com'
+                'name' => 'shizi silvi',
+                'password' => 'password1234',
+                'email' => 'shizi.silvi@gmail.com'
             ]
         );
         $shizi->assignRole('Super-Admin');

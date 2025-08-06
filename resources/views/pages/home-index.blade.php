@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="The Wedding of Ziqfa &amp; Silvi">
 
     <livewire:wedding-hero class="z-50" :guest="$guest ?? ''" :hero="$media[0]->path" />
 
@@ -7,7 +7,7 @@
     </audio>
     <!-- Floating Music Control Button -->
     <div id="musicControl"
-        class="fixed bottom-5 right-5 z-30 cursor-pointer rounded-full bg-rose-400 p-3 text-white shadow-lg hover:bg-rose-500">
+        class="fixed bottom-5 left-5 z-30 cursor-pointer rounded-full bg-rose-400 p-3 text-white shadow-lg hover:bg-rose-500">
         <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -23,7 +23,7 @@
     </div>
 
     <section id="first">
-        <div class="mx-auto max-w-(--breakpoint-md) px-4 pt-8 text-center">
+        <div class="max-w-(--breakpoint-md) mx-auto px-4 pt-8 text-center">
             <div class="" data-observe>
                 <flux:heading level="2" data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble translate-y-20 opacity-0"
@@ -84,9 +84,9 @@
         window.scrollTo(0, 0);
 
         // // Menghilangkan "#first" dari URL jika ada
-        // if (window.location.hash === "#first") {
-        //     history.replaceState(null, document.title, window.location.pathname + window.location.search);
-        // }
+        if (window.location.hash === "#first") {
+            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
     };
     // Pastikan scroll ke atas saat halaman dimuat
     window.history.scrollRestoration = "manual";

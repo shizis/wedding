@@ -3,10 +3,39 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="language" content="en-US" />
+        <meta name="robots" content="index,follow" />
+        <meta http-equiv="Cache-Control" content="cache" />
+        <meta http-equiv="x-dns-prefetch-control" content="off" />
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="googlebot-news" content="noindex" />
+        <meta name="google" content="notranslate">
+        <link rel="canonical" href="{{ url('/ziqfa-silvi') }}" />
 
         <title>{{ isset($title) ? "$title - " . config('app.name') : config('app.name') }}</title>
+
+        <meta name="title" content="The Wedding of Ziqfa &amp; Silvi">
+        <meta name="description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
+        <meta name="url" content="{{ url('/ziqfa-silvi') }}" />
+        <meta name="identifier-URL" content="{{ url('/') }}" />
+        <meta name="keywords" content="wedding website, ziqfa silvi," />
+
+        <meta name="og:title" content="The Wedding of Angga &amp; Laras" />
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="{{ url('/ziqfa-silvi') }}" />
+        <meta name="og:image" content="{{ url('images/2.jpg') }}" />
+        <meta name="og:site_name" content="ziqfa &amp; silvi" />
+        <meta name="og:description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
+        <!-- apple meta tags -->
+        <meta name="apple-mobile-web-app-title" content="Wedding Ziqfa &amp; Silvi" />
+        <!-- New in iOS6 -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

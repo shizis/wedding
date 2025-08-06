@@ -12,16 +12,13 @@
     </head>
 
     <body class="min-h-screen bg-zinc-100 antialiased">
-        <main class="mx-auto flex min-h-screen max-w-(--breakpoint-xl) flex-col place-content-center gap-4 px-6">
+        <main class="max-w-(--breakpoint-xl) mx-auto flex min-h-screen flex-col place-content-center gap-4 px-6">
             <div class="inline-flex justify-end">
                 <a href="/" class="rounded-sm border border-gray-300 bg-white p-2 hover:bg-gray-100">
                     <x-lucide-house class="size-5 text-gray-500" />
                 </a>
             </div>
-            <div class="grid w-full grid-cols-2 shadow-sm">
-                <div class="w-full rounded-s-sm border-y border-s border-gray-300 bg-blue-300">
-                    <img src="" alt="">
-                </div>
+            <div class="grid w-full shadow-sm">
                 <div
                     class="py-15 flex w-full flex-col gap-y-4 rounded-e-sm border-y border-r border-gray-300 bg-white px-10">
                     <h1 class="text-2xl font-semibold text-gray-700">Sign in</h1>
