@@ -20,13 +20,13 @@
         <meta name="title" content="The Wedding of Ziqfa &amp; Silvi">
         <meta name="description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
         <meta name="url" content="{{ url('/ziqfa-silvi') }}" />
-        <meta name="identifier-URL" content="{{ url('/') }}" />
+        <meta name="identifier-URL" content="{{ url('/ziqfa-silvi') }}" />
         <meta name="keywords" content="wedding website, ziqfa silvi," />
 
-        <meta name="og:title" content="The Wedding of Angga &amp; Laras" />
+        <meta name="og:title" content="The Wedding of Ziqfa &amp; Silvi" />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="{{ url('/ziqfa-silvi') }}" />
-        <meta name="og:image" content="{{ url('images/2.jpg') }}" />
+        <meta name="og:image" content="{{ asset('images/2.jpg') }}" />
         <meta name="og:site_name" content="ziqfa &amp; silvi" />
         <meta name="og:description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
         <!-- apple meta tags -->
