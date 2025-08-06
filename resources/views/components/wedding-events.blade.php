@@ -40,10 +40,15 @@
                         <x-lucide-map-pinned class="size-6 shrink-0" />
                         <p>Kediaman Mempelai Wanita Desa Gunung Labu</p>
                     </div>
-                    <flux:button variant="primary" class="bg-rose-400 text-black hover:bg-rose-500" as="a"
-                        href="https://maps.app.goo.gl/2EuqfZMoZmQwGrne8" target="_blank">
-                        View in Maps
-                    </flux:button>
+                    <div data-observe>
+                        <flux:button variant="primary"
+                            class="translate-y-20 transform bg-rose-400 text-black opacity-0 transition-all delay-300 duration-1000 ease-in-out hover:bg-rose-500"
+                            as="a" href="https://maps.app.goo.gl/2EuqfZMoZmQwGrne8" target="_blank"
+                            data-class-in="visible translate-y-0 opacity-100"
+                            data-class-out="invisble translate-y-20 opacity-0">
+                            View in Maps
+                        </flux:button>
+                    </div>
                 </div>
                 <div class="translate-y-15 flex transform flex-col gap-y-4 rounded-lg bg-rose-300/50 p-4 opacity-0 shadow-sm transition-all delay-100 duration-1000 ease-in-out"
                     data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-15 opacity-0"
@@ -67,10 +72,15 @@
                         <x-lucide-map-pinned class="size-6 shrink-0" />
                         <p>Kediaman Mempelai Wanita Desa Gunung Labu</p>
                     </div>
-                    <flux:button variant="primary" class="bg-rose-400 text-black hover:bg-rose-500" as="a"
-                        href="https://maps.app.goo.gl/2EuqfZMoZmQwGrne8" target="_blank">
-                        View in Maps
-                    </flux:button>
+                    <div data-observe>
+                        <flux:button variant="primary"
+                            class="translate-y-20 transform bg-rose-400 text-black opacity-0 transition-all delay-300 duration-1000 ease-in-out hover:bg-rose-500"
+                            as="a" href="https://maps.app.goo.gl/2EuqfZMoZmQwGrne8" target="_blank"
+                            data-class-in="visible translate-y-0 opacity-100"
+                            data-class-out="invisble translate-y-20 opacity-0">
+                            View in Maps
+                        </flux:button>
+                    </div>
                 </div>
                 <div class="translate-y-15 flex transform flex-col gap-y-4 rounded-lg bg-rose-300/50 p-4 opacity-0 shadow-sm transition-all delay-100 duration-1000 ease-in-out"
                     data-class-in="visible translate-y-0 opacity-100" data-class-out="invisble translate-y-15 opacity-0"
@@ -89,15 +99,21 @@
                         <x-lucide-clock class="size-6 shrink-0" />
                         <p>Pukul 13:00 WIB s/d Selesai</p>
                     </div>
-                    <div class="delay-350 flex translate-y-20 transform items-center gap-x-2 text-start text-gray-700 opacity-0 transition-all duration-1000 ease-in-out"data-class-in="visible translate-y-0 opacity-100"
+                    <div class="delay-350 flex translate-y-20 transform items-center gap-x-2 text-start text-gray-700 opacity-0 transition-all duration-1000 ease-in-out"
+                        data-class-in="visible translate-y-0 opacity-100"
                         data-class-out="invisble translate-y-20 opacity-0">
                         <x-lucide-map-pinned class="size-6 shrink-0" />
                         <p>Kediaman Mempelai Pria Desa Batang Sangir</p>
                     </div>
-                    <flux:button variant="primary" class="bg-rose-400 text-black hover:bg-rose-500" as="a"
-                        href="https://maps.app.goo.gl/Z18T95WY6SxUKEUq9" target="_blank">
-                        View in Maps
-                    </flux:button>
+                    <div data-observe>
+                        <flux:button variant="primary"
+                            class="translate-y-20 transform bg-rose-400 text-black opacity-0 transition-all delay-300 duration-1000 ease-in-out hover:bg-rose-500"
+                            as="a" href="https://maps.app.goo.gl/Z18T95WY6SxUKEUq9" target="_blank"
+                            data-class-in="visible translate-y-0 opacity-100"
+                            data-class-out="invisble translate-y-20 opacity-0">
+                            View in Maps
+                        </flux:button>
+                    </div>
                 </div>
             </div>
             <div class="max-w-2xl self-center" data-observe>

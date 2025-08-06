@@ -67,7 +67,7 @@
         @fluxAppearance
     </head>
 
-    <body class="font-poppins bg-white antialiased">
+    <body class="font-poppins touch-pan-y overflow-x-hidden bg-white antialiased">
         <!-- Page Content -->
         <main class="">
             {{ $slot }}
