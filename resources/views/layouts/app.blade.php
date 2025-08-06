@@ -13,21 +13,21 @@
         <meta name="robots" content="noindex,nofollow" />
         <meta name="googlebot-news" content="noindex" />
         <meta name="google" content="notranslate">
-        <link rel="canonical" href="{{ url('/ziqfa-silvi') }}" />
+        <link rel="canonical" href="{{ request()->fullUrl() }}" />
 
         <title>{{ isset($title) ? "$title - " . config('app.name') : config('app.name') }}</title>
 
         <meta name="title" content="The Wedding of Ziqfa &amp; Silvi">
         <meta name="description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
-        <meta name="url" content="{{ url('/ziqfa-silvi') }}" />
-        <meta name="identifier-URL" content="{{ url('/ziqfa-silvi') }}" />
+        <meta name="url" content="{{ request()->fullUrl() }}" />
+        <meta name="identifier-URL" content="{{ request()->fullUrl() }}" />
         <meta name="keywords" content="wedding website, ziqfa silvi," />
 
         <meta name="og:title" content="The Wedding of Ziqfa &amp; Silvi" />
         <meta name="og:type" content="website" />
-        <meta name="og:url" content="{{ url('/ziqfa-silvi') }}" />
+        <meta name="og:url" content="{{ request()->fullUrl() }}" />
         <meta name="og:image" content="{{ asset('images/2.jpg') }}" />
-        <meta name="og:site_name" content="ziqfa &amp; silvi" />
+        <meta name="og:site_name" content="wedding ziqfa &amp; silvi" />
         <meta name="og:description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
         <!-- apple meta tags -->
         <meta name="apple-mobile-web-app-title" content="Wedding Ziqfa &amp; Silvi" />
@@ -36,6 +36,11 @@
         <meta name="apple-touch-fullscreen" content="no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="format-detection" content="telephone=no" />
+        <link href="http://github.com/images/touch-icon-iphone4.png" sizes="114x114"
+            rel="apple-touch-icon-precomposed" />
+        <link href="http://github.com/images/touch-icon-ipad.png" sizes="72x72" rel="apple-touch-icon-precomposed" />
+        <link href="http://github.com/images/apple-touch-icon-57x57.png" sizes="57x57"
+            rel="apple-touch-icon-precomposed" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
