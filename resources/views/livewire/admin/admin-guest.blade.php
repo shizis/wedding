@@ -1,5 +1,5 @@
 <div>
-    <div class="my-4">
+    <div class="my-4 flex items-center justify-between">
         <flux:modal.trigger name="create-guest">
             <flux:button type="button" icon="plus" variant="primary" color="sky">Create Guest</flux:button>
         </flux:modal.trigger>
@@ -39,6 +39,9 @@
                 </div>
             </form>
         </flux:modal>
+        <div>
+            <p class="text-neutral-600 dark:text-neutral-400">Jumlah Tamu: ({{ count($guests) }})</p>
+        </div>
     </div>
 
     <table class="w-full border-separate rounded-md border border-gray-400 dark:border-neutral-600">
@@ -112,8 +115,8 @@
                                 icon="share" variant="primary" color="cyan" data-action="share/whatsapp/share"
                                 href="https://api.whatsapp.com/send?text=Assalamualaikum Warahmatullahi Wabarakatuh.%0a%0aTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i *{{ $guest->name }}* untuk menghadiri acara kami %0a%0aBerikut link undangan kami, untuk info lengkap dari acara bisa kunjungi: {{ url('/ziqfa-silvi/' . Auth::user()->id . '/to/' . $guest->slug . '/' . $guest->uuid) }} %0a %0a%0aMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.%0a%0aMohon maaf perihal undangan hanya di bagikan melalui pesan ini.%0a%0aTerima kasih banyak atas perhatiannya.%0a%0aWassalamualaikum Warahmatullahi Wabarakatuh." />
 
-                            <flux:button x-data="{ text: 'Assalamualaikum Warahmatullahi Wabarakatuh.\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i *{{ $guest->name }}* untuk menghadiri acara kami \nBerikut link undangan kami, untuk info lengkap dari acara bisa kunjungi: \n{{ url('/ziqfa-silvi/' . Auth::user()->id . '/to/' . $guest->slug . '/' . $guest->uuid) }} \n\nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\nMohon maaf perihal undangan hanya di bagikan melalui pesan ini.\n\nTerima kasih banyak atas perhatiannya.\n\nWassalamualaikum Warahmatullahi Wabarakatuh.' }" x-on:click="navigator.clipboard.writeText(text)"
-                                icon="clipboard" tooltip="Copy link" />
+                            <flux:button variant="primary" color="yellow" x-data="{ text: 'Assalamualaikum Warahmatullahi Wabarakatuh.\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i *{{ $guest->name }}* untuk menghadiri acara kami \nBerikut link undangan kami, untuk info lengkap dari acara bisa kunjungi: \n{{ url('/ziqfa-silvi/' . Auth::user()->id . '/to/' . $guest->slug . '/' . $guest->uuid) }} \n\nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\nMohon maaf perihal undangan hanya di bagikan melalui pesan ini.\n\nTerima kasih banyak atas perhatiannya.\n\nWassalamualaikum Warahmatullahi Wabarakatuh.' }"
+                                x-on:click="navigator.clipboard.writeText(text)" icon="clipboard" tooltip="Copy link" />
 
                             <flux:modal.trigger name="destroy-guest-{{ $guest->id }}">
                                 <flux:button variant="primary" color="red" icon="trash" tooltip="Delete" />
