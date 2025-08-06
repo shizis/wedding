@@ -108,8 +108,8 @@
                                     'uuid' => $guest->uuid,
                                 ]) }}" />
 
-                            <flux:button id="share" tooltip="Share to Whatsapp" target="_blank" icon="share"
-                                variant="primary" color="cyan" data-action="share/whatsapp/share"
+                            <flux:button id="share" as="a" tooltip="Share to Whatsapp" target="_blank"
+                                icon="share" variant="primary" color="cyan" data-action="share/whatsapp/share"
                                 href="https://api.whatsapp.com/send?text=Assalamualaikum Warahmatullahi Wabarakatuh.%0a%0aTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i *{{ $guest->name }}* untuk menghadiri acara kami %0a%0aBerikut link undangan kami, untuk info lengkap dari acara bisa kunjungi: {{ url('/ziqfa-silvi/' . Auth::user()->id . '/to/' . $guest->slug . '/' . $guest->uuid) }} %0a %0a%0aMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.%0a%0aMohon maaf perihal undangan hanya di bagikan melalui pesan ini.%0a%0aTerima kasih banyak atas perhatiannya.%0a%0aWassalamualaikum Warahmatullahi Wabarakatuh." />
 
                             <flux:button x-data="{ text: 'Assalamualaikum Warahmatullahi Wabarakatuh.\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i *{{ $guest->name }}* untuk menghadiri acara kami \n\nBerikut link undangan kami, untuk info lengkap dari acara bisa kunjungi: \n {{ url('/ziqfa-silvi/' . Auth::user()->id . '/to/' . $guest->slug . '/' . $guest->uuid) }} \n\nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\nMohon maaf perihal undangan hanya di bagikan melalui pesan ini.\n\nTerima kasih banyak atas perhatiannya.\n\nWassalamualaikum Warahmatullahi Wabarakatuh.' }" x-on:click="navigator.clipboard.writeText(text)"
