@@ -19,23 +19,19 @@
 
         <meta name="title" content="The Wedding of Ziqfa &amp; Silvi">
         <meta name="description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
-        <meta name="url" content="{{ url('/') }}" />
+        <meta name="url" content="{{ url('/ziqfa-silvi') }}" />
         <meta name="identifier-URL" content="{{ url('/') }}" />
         <meta name="keywords" content="wedding website, ziqfa silvi," />
 
-        <meta name="og:title" content="The Wedding of Ziqfa &amp; Silvi" />
-        <meta name="og:type" content="website" />
-        <meta name="og:url" content="{{ request()->fullUrl() }}" />
-        <meta name="og:image" content="{{ url('images/1.jpg') }}" />
-        <meta name="og:site_name" content="The Wedding of Ziqfa &amp; Silvi" />
-        <meta name="og:description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
-
+        <meta property="og:url" content="{{ url('/ziqfa-silvi') }}" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content="The Wedding of Ziqfa &amp; Silvi" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ request()->fullUrl() }}" />
-        <meta property="og:image" content="{{ url('images/1.jpg') }}" />
         <meta property="og:site_name" content="The Wedding of Ziqfa &amp; Silvi" />
         <meta property="og:description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
+        <meta property="og:image" content="{{ url('images/1.jpg') }}" />
+        <meta property="og:image:width" content="1080" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:image:type" content="image/jpeg" />
 
         <!-- apple meta tags -->
         <meta name="apple-mobile-web-app-title" content="The Wedding of Ziqfa &amp; Silvi" />
