@@ -108,6 +108,9 @@
                                     'uuid' => $guest->uuid,
                                 ]) }}" />
 
+                            <flux:button target="_blank" icon="share" variant="primary" color="cyan"
+                                href="https://api.whatsapp.com/send?text=Assalamualaikum Warahmatullahi Wabarakatuh.%0a%0aTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i *{{ $guest->name }}* untuk menghadiri acara kami %0a%0aBerikut link undangan kami, untuk info lengkap dari acara bisa kunjungi: {{ url('/ziqfa-silvi/' . Auth::user()->id . '/to/' . $guest->slug . '/' . $guest->uuid) }} %0a %0a%0aMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.%0a%0aMohon maaf perihal undangan hanya di bagikan melalui pesan ini.%0a%0aTerima kasih banyak atas perhatiannya.%0a%0aWassalamualaikum Warahmatullahi Wabarakatuh." />
+
                             <flux:modal.trigger name="destroy-guest-{{ $guest->id }}">
                                 <flux:button variant="primary" color="red" icon="trash" tooltip="Delete" />
                             </flux:modal.trigger>
