@@ -26,7 +26,7 @@
         <meta name="og:title" content="The Wedding of Ziqfa &amp; Silvi" />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="{{ url('/') }}" />
-        <meta name="og:image" content="{{ asset('images/2.jpg') }}" />
+        <meta name="og:image" content="{{ asset('images/1.jpg') }}" />
         <meta name="og:site_name" content="wedding ziqfa &amp; silvi" />
         <meta name="og:description" content="Minggu - Senin, 10 - 11 Agustus 2025" />
         <!-- apple meta tags -->
